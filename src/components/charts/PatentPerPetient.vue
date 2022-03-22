@@ -10,7 +10,7 @@
           <area-chart
             class="ch"
             :data="{
-              '2019-01-01 00:00:00 -0800': 1,
+              '2021-01-01 00:00:00 -0800': 1,
               '2019-06-01 00:00:00 -0800': 0.5,
               '2020-01-01 00:01:00 -0800': 2,
             }"
@@ -56,47 +56,39 @@
 </template>
 <script>
 import axios from "axios";
-
+import "@/charts/PatientAnaly.js";
 export default {
   name: "PatentPerPetient",
   data() {
     return {
-      info: [
-        {
-          data: [],
-        },
-      ],
+      data: "",
     };
   },
-
-  created() {
+  // computed: {
+  //   patientsNumData() {
+  //     return this.$store.state.Admin.patientsNumS;
+  //   },
+  // },
+  async mounted() {
     const token = localStorage.getItem("token");
     axios.defaults.headers.common["Authorization"] = "Bearer " + token;
-    // console.log(token);
-    axios
-      .get("https://home.phi-pt.cat-sw.com/api/admin/main-charts", {
+
+    const resp = await axios.get(
+      "https://home.phi-pt.cat-sw.com/api/admin/main-charts",
+      {
         header: {
           Authorization: "Bearer" + token,
         },
-      })
-      .then((response) => {
-        console.log(response.data);
-        this.info.data = response.data.number_of_patients.patients_per_year;
-        //  var data = response.data;
-        //   (this.info = response.data.bpi)
+      }
+    );
 
-        // (this.info = response.data.);
-
-        // this.info = response.data.json();
-        // console.log(response.data);
-        // response.data.forEach((element) => {
-        //   this.info.push(element);
-        // });
-      })
-      .catch((error) => console.log(error.response));
-    // console.log(response.data);
-    // console.log(data);
-    console.log(this.info);
+    let patientAnalytics = await resp.data.patient_analytics;
+    console.log(patientAnalytics);
+    this.data = {
+      "2021-01-01 00:00:00 -0800": 1,
+      "2019-06-01 00:00:00 -0800": 0.5,
+      "2020-01-01 00:01:00 -0800": 2,
+    };
   },
 };
 </script>

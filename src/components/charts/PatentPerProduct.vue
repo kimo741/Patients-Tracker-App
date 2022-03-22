@@ -4,46 +4,21 @@
     <div class="per-product">
       <p class="per-total">148,850</p>
       <span class="Patient-span">Patient</span>
-      <div class="svg-container">
-        <bar-chart
-          class="ch-2"
-          :colors="['#A020F0', '#A020F0']"
-          :data="[
-            ['Darzalex', 10050],
-            ['Stelara CD', 4050],
-            ['Stelara UC', 11110],
-            ['Tremfaya PsO', 2500],
-            ['Erleada PsO', 2500],
-            ['Impruvica PsO', 7000],
-          ]"
-        ></bar-chart>
-      </div>
+      <div class="svg-container"></div>
     </div>
+    <Bar-char> </Bar-char>
   </div>
 </template>
+
 <script>
 // import axios from "axios";
+import BarChar from "@/charts/BarChar.vue";
 
 export default {
   name: "PatentPerProduct",
-  data() {
-    return {
-      info: null,
-    };
+  components: {
+    BarChar,
   },
-
-  //   created() {
-  //     // axios
-  //     //   .get("https://home.phi-pt.cat-sw.com/api/admin/main-charts", {
-  //     //     headers: { Authorization: "bearer" + token },
-  //     //   })
-  //     //   .then((response) => {
-  //     //     console.log(response.data);
-  //     //     this.info = response.data;
-  //     //   })
-  // //       .catch((error) => console.log(error.response));
-  // //   },
-  // };
 };
 </script>
 <style scoped>
@@ -54,5 +29,13 @@ export default {
   width: 90%;
   height: 70% !important;
   border-radius: 15px;
+}
+.small {
+  background: #ddd !important;
+  border-radius: 20px;
+}
+.per-product {
+  background-color: rgba(174, 174, 174, 0.7) !important;
+  border-radius: 20px;
 }
 </style>

@@ -2,12 +2,12 @@
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   font-size: 62.5%;
 }
 
@@ -17,7 +17,9 @@ body {
   height: 100vh;
 }
 
-.charts-1 .num, .charts-1 .total, h3 {
+.charts-1 .num,
+.charts-1 .total,
+h3 {
   font-size: 2.5rem;
   text-transform: capitalize;
   margin-bottom: 1.5rem;
@@ -25,6 +27,7 @@ body {
 
 .wrapper {
   padding: 1rem 2rem;
+  width: 90%;
   height: 100%;
   background-color: whitesmoke;
   display: -webkit-box;
@@ -42,15 +45,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: none;
   font-size: 2rem;
 }
-a:active, a:visited {
+a:active,
+a:visited {
   color: #777;
 }
 a .side {
@@ -61,8 +65,8 @@ a .side {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 h3 {
@@ -75,17 +79,17 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
+  -ms-flex: 0 1 30%;
+  flex: 0 1 30%;
 }
 .charts-1 .total-num-pat {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 20rem;
-          flex: 0 1 20rem;
+  -ms-flex: 0 1 20rem;
+  flex: 0 1 20rem;
   background-color: #426eff;
   padding: 1rem;
   color: #fff;
@@ -104,8 +108,8 @@ h3 {
   display: flex;
   gap: 1rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #053696;
   color: #fff;
   padding: 1rem;
@@ -119,7 +123,7 @@ h3 {
   margin: 0;
 }
 .charts-1 .pat-an {
-  background-color: #679DFC;
+  background-color: #679dfc;
   color: #fff;
   padding: 1rem 2rem;
 }
@@ -142,15 +146,15 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .charts-1 .pat-an .an-chart .percentage {
   font-size: 4rem;
@@ -161,11 +165,11 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .charts-1 .pat-an .an-para-cont .approved {
   position: relative;
@@ -180,7 +184,7 @@ h3 {
   top: 0;
   left: -1.5rem;
   -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 .charts-1 .pat-an .approved-num {
   font-size: 2rem;
@@ -194,12 +198,12 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 2rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 .chart-2 p {
   font-size: 4rem;
@@ -216,11 +220,11 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 20rem;
-          flex: 0 1 20rem;
+  -ms-flex: 0 1 20rem;
+  flex: 0 1 20rem;
   gap: 2rem;
   background-color: #ddd;
 }
@@ -229,8 +233,8 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .chart-2 .result-status {
   font-size: 1.5rem;

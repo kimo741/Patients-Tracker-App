@@ -72,12 +72,9 @@ export default {
         .then((response) => {
           localStorage.setItem("token", response.data.access_token);
           this.$router.push("/dashboard");
-          this.$store.state.token = response.data.token;
           console.log(response);
-          // console.log(tok);
         })
         .catch((error) => {
-          console.log("Error login");
           console.log(error);
           this.err = true;
         });

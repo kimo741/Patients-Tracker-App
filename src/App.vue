@@ -10,6 +10,13 @@
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  // created() {
+  //   this.$store.dispatch("Admin/PatientPerPayers");
+  // },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

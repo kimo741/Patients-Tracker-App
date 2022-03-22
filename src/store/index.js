@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
+import Admin from "./admin/index.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    info: {},
-  },
+  state: {},
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {
+    Admin,
+  },
 });

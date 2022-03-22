@@ -5,13 +5,24 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import { Chart } from "chart.js";
-import Chartkick from "vue-chartkick";
 import VueAxios from "vue-axios";
+import Chartkick from "vue-chartkick";
+import Chart from "chart.js";
 
-Vue.use(VueAxios, axios);
 Vue.use(Chartkick.use(Chart));
+// import "chartkick/chart.js";
+
+// register globally (or you can do it locally)
+
+// import VueApexCharts from "vue-apexcharts";
+// Vue.use(VueApexCharts);
+
+// Vue.component("apexchart", VueApexCharts);
+
+// import Chart from "chart.js";;
+Vue.use(VueAxios, axios);
 Vue.use(Vuex);
+// Vue.use(Chart);
 
 Vue.config.productionTip = false;
 require("./assets/css/main.css");

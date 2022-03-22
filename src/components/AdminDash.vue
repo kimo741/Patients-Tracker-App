@@ -1,6 +1,8 @@
 <template>
   <div>
     <div class="wrapper">
+      <nav-right> </nav-right>
+
       <!-- nav section -->
       <aside class="side">
         <a href="#">
@@ -35,6 +37,7 @@
 import PatentPerPetient from "@/components/charts/PatentPerPetient.vue";
 import PatentPerProduct from "@/components/charts/PatentPerProduct.vue";
 import PatentPerPyer from "@/components/charts/PatentPerPyer.vue";
+import NavRight from "@/components/NavRight.vue";
 
 export default {
   name: "AdminDash",
@@ -42,6 +45,7 @@ export default {
     PatentPerPetient,
     PatentPerProduct,
     PatentPerPyer,
+    NavRight,
   },
 };
 </script>
