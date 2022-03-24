@@ -2,10 +2,22 @@
   <div class="container">
     <div class="nav__right">
       <ul class="nav__right--ul">
-        <li><p>link</p></li>
-        <li><p>link</p></li>
-        <li><p>link</p></li>
-        <li><p>link</p></li>
+        <router-link :to="'/'"><p class="all">All</p> </router-link>
+        <router-link :to="'/'"
+          ><img src="@/assets/ImageLinks/link-2.png" alt=""
+        /></router-link>
+        <router-link :to="'/home'"
+          ><img src="@/assets/ImageLinks/link-3.png" alt=""
+        /></router-link>
+        <router-link :to="'/'"
+          ><img src="@/assets/ImageLinks/link-4.png" alt=""
+        /></router-link>
+        <router-link :to="'/'"
+          ><img src="@/assets/ImageLinks/link5.png" alt=""
+        /></router-link>
+        <router-link :to="'/'"
+          ><img src="@/assets/ImageLinks/link6.png" alt=""
+        /></router-link>
       </ul>
     </div>
   </div>
@@ -30,10 +42,14 @@ export default {
   align-items: center;
   z-index: 500;
   width: 4%;
-  height: 50%;
-  max-height: 60%;
+  height: 70%;
   right: 5px;
   border-radius: 30px;
+  transition: all 1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(235, 235, 235, 0.118);
+  }
 
   &--ul {
     margin: auto;
@@ -47,7 +63,7 @@ export default {
     padding: 0 !important;
     text-align: center !important;
 
-    & li {
+    router-link {
       display: block;
       width: 100%;
       height: max-content;
@@ -57,6 +73,15 @@ export default {
       color: #426eff;
       cursor: pointer;
       font-weight: bold;
+    }
+    .all {
+      margin-left: 5px !important;
+      background-color: #426effa4;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: auto;
+      padding: 1.2rem;
+      color: #fff;
     }
   }
 }

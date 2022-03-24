@@ -8,6 +8,15 @@ import store from "./store";
 import VueAxios from "vue-axios";
 import Chartkick from "vue-chartkick";
 import Chart from "chart.js";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPerson } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// import { faPerson } from "@fortawesome/free-solid-svg-icons";
+// import { faPerson } from "@fortawesome/free-brands-svg-icons";
+
+library.add(faPerson);
+
+Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.use(Chartkick.use(Chart));
 // import "chartkick/chart.js";

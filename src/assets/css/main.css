@@ -93,6 +93,10 @@ h3 {
   background-color: #426eff;
   padding: 1rem;
   color: #fff;
+  height: 500px;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  border-radius: 20px;
 }
 .charts-1 .total {
   font-size: 1.5rem;
@@ -112,7 +116,8 @@ h3 {
   align-items: center;
   background-color: #053696;
   color: #fff;
-  padding: 1rem;
+  border-radius: 20px;
+  padding: 1rem !important;
 }
 .charts-1 .total-num-pay .users {
   font-size: 3rem;
@@ -125,13 +130,16 @@ h3 {
 .charts-1 .pat-an {
   background-color: #679dfc;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem !important;
+  border-radius: 20px;
 }
 .charts-1 .pat-an .pat-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
+  justify-content: center;
+  align-content: center;
 }
 .charts-1 .pat-an .an-chart {
   width: 10rem;

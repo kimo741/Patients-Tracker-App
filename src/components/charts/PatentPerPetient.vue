@@ -33,63 +33,50 @@
         <!-- chart & approved/rejected container -->
         <div class="pat-cont">
           <!-- chart container (SVG) -->
-          <div class="an-chart">
-            <span class="percentage">65%</span>
-            <p class="approved">approved</p>
-          </div>
-          <!-- approved & rejected container -->
-          <div class="an-para-cont">
-            <div class="an-para">
-              <p class="approved">approved</p>
-              <p class="approved-num">1200</p>
-            </div>
-
-            <div class="an-para">
-              <p class="approved">rejected</p>
-              <p class="approved-num">35000</p>
-            </div>
-          </div>
+          <PieAnnaly />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import axios from "axios";
-import "@/charts/PatientAnaly.js";
+import PieAnnaly from "@/charts/PieAnnaly.vue";
+// import axios from "axios";
 export default {
   name: "PatentPerPetient",
+  components: { PieAnnaly },
   data() {
     return {
       data: "",
     };
   },
+
   // computed: {
   //   patientsNumData() {
   //     return this.$store.state.Admin.patientsNumS;
   //   },
   // },
-  async mounted() {
-    const token = localStorage.getItem("token");
-    axios.defaults.headers.common["Authorization"] = "Bearer " + token;
+  // async mounted() {
+  //   const token = localStorage.getItem("token");
+  //   axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 
-    const resp = await axios.get(
-      "https://home.phi-pt.cat-sw.com/api/admin/main-charts",
-      {
-        header: {
-          Authorization: "Bearer" + token,
-        },
-      }
-    );
+  //   const resp = await axios.get(
+  //     "https://home.phi-pt.cat-sw.com/api/admin/main-charts",
+  //     {
+  //       header: {
+  //         Authorization: "Bearer" + token,
+  //       },
+  //     }
+  //   );
 
-    let patientAnalytics = await resp.data.patient_analytics;
-    console.log(patientAnalytics);
-    this.data = {
-      "2021-01-01 00:00:00 -0800": 1,
-      "2019-06-01 00:00:00 -0800": 0.5,
-      "2020-01-01 00:01:00 -0800": 2,
-    };
-  },
+  //   let patientAnalytics = await resp.data.patient_analytics;
+  //   console.log(patientAnalytics);
+  //   this.data = {
+  //     "2021-01-01 00:00:00 -0800": 1,
+  //     "2019-06-01 00:00:00 -0800": 0.5,
+  //     "2020-01-01 00:01:00 -0800": 2,
+  //   };
+  // },
 };
 </script>
 <style scoped>
@@ -97,5 +84,9 @@ export default {
   z-index: 100 !important;
   background-color: white !important;
   height: 80% !important;
+}
+.total {
+  font-size: 2rem !important;
+  font-weight: bolder;
 }
 </style>

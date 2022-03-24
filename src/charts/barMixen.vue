@@ -41,7 +41,6 @@ export default {
       }
     );
     let patientPayers = await resp.data.patient_per_payers.data;
-    console.log(patientPayers);
 
     this.data = {
       labels: [...patientPayers.map((doc) => doc.name)],

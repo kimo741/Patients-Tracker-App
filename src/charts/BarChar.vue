@@ -30,6 +30,7 @@ export default {
         legend: {
           display: false,
         },
+        // width: 50,
         responsive: true,
         maintainAspectRatio: false,
       },
@@ -50,7 +51,6 @@ export default {
       }
     );
     let patientProducts = await resp.data.patient_per_products.data;
-    console.log(patientProducts);
 
     this.chartData = {
       labels: [...patientProducts.map((doc) => doc.name)],
