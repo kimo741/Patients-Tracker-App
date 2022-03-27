@@ -1,26 +1,18 @@
 <template>
   <div>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
     <div class="wrapper">
-      <nav-right> </nav-right>
-
-      <!-- nav section -->
       <aside class="side">
         <a href="#">
-          <i class="fas fa-project-diagram"></i>
+          <img src="@/assets/ImageLinks/user.png" />
         </a>
         <a href="#">
           <i class="fas fa-project-diagram"></i>
         </a>
-        <a href="#">
-          <i class="fas fa-project-diagram"></i>
-        </a>
+
+        <a href="#"> <font-awesome-icon icon="fa-solid fa-gear" /> </a>
       </aside>
+      <!-- nav section -->
+
       <!-- first chart container -->
       <PatentPerPetient />
 
@@ -75,19 +67,28 @@
         </div>
       </div>
     </div>
+    <div class="map-chart">
+      <div class="line-chart">
+        <HorezChart />
+      </div>
+      <div class="map">
+        <marker-map />
+      </div>
+    </div>
   </div>
 </template>
 <script>
+import HorezChart from "@/charts/HorezChart.vue";
+import MarkerMap from "@/components/charts/MarkerMap.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faUserSecret);
 import PatentPerPetient from "@/components/charts/PatentPerPetient.vue";
 import PatentPerProduct from "@/components/charts/PatentPerProduct.vue";
 import PatentPerPyer from "@/components/charts/PatentPerPyer.vue";
-import NavRight from "@/components/NavRight.vue";
+
 import phicom from "@/components/charts/PhiCom.vue";
 import Phivsother from "@/charts/Phivsother.vue";
+library.add(faUserSecret);
 
 export default {
   name: "AdminDash",
@@ -95,9 +96,11 @@ export default {
     PatentPerPetient,
     PatentPerProduct,
     PatentPerPyer,
-    NavRight,
+
     phicom,
     Phivsother,
+    MarkerMap,
+    HorezChart,
   },
   data() {
     return {
@@ -157,7 +160,7 @@ export default {
       .fixed {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 80% !important;
         .tiltle-pie {
           font-weight: bolder;
           color: #777;
@@ -229,6 +232,27 @@ export default {
   }
   .reject--#{$i} {
     color: #935ccb !important;
+  }
+}
+.map-chart {
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ddd;
+  width: 82%;
+  margin: auto;
+  border-radius: 20px;
+  .map {
+    width: 60%;
+    height: 100% !important;
+  }
+  .line-chart {
+    box-sizing: border-box;
+    width: 30%;
+    height: 80%;
   }
 }
 </style>

@@ -71,7 +71,7 @@ export default {
         )
         .then((response) => {
           localStorage.setItem("token", response.data.access_token);
-          this.$router.push("/dashboard");
+          this.$router.push("/dashboard/admindash");
           console.log(response);
         })
         .catch((error) => {
@@ -112,6 +112,7 @@ h3 {
   margin-bottom: 1.5rem;
 }
 .home {
+  margin-top: 15rem;
   width: 90%;
   height: 100%;
 }

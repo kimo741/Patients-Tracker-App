@@ -26,6 +26,15 @@ body {
   background-color: whitesmoke;
   display: flex;
   gap: 3rem;
+  margin-top: 10rem;
+  .side {
+    background-color: #fff;
+    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 10rem;
+    opacity: 0 !important;
+  }
 }
 a {
   width: 5rem;
@@ -42,14 +51,6 @@ a {
   &:active,
   &:visited {
     color: #777;
-  }
-
-  .side {
-    background-color: #fff;
-    padding: 2rem 0.5rem;
-    display: flex;
-    flex-direction: column;
-    // flex: 0 1 10rem;
   }
 }
 h3 {
