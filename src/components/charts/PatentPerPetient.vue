@@ -33,7 +33,7 @@
         <!-- chart & approved/rejected container -->
         <div class="pat-cont">
           <!-- chart container (SVG) -->
-          <PieAnnaly />
+          <PieAnnaly :width="300" :height="200" />
         </div>
       </div>
     </div>

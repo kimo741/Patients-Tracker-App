@@ -6,7 +6,7 @@
       <span class="Patient-span">Patient</span>
       <div class="svg-container"></div>
     </div>
-    <Bar-char class="baar"> </Bar-char>
+    <Bar-char class="baar" :width="250" :height="250"> </Bar-char>
   </div>
 </template>
 

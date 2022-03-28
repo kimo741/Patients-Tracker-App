@@ -9,9 +9,14 @@ import VueAxios from "vue-axios";
 import Chartkick from "vue-chartkick";
 import Chart from "chart.js";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPerson, faGear } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPerson,
+  faGear,
+  faArrowRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import * as VueGoogleMaps from "vue2-google-maps";
+faArrowRightFromBracket;
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -21,7 +26,7 @@ Vue.use(VueGoogleMaps, {
 });
 require("../src/assets/css/main.css");
 require("../src/assets/scss/main.scss");
-library.add(faPerson, faGear);
+library.add(faPerson, faGear, faArrowRightFromBracket);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

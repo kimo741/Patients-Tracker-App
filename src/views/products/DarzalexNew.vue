@@ -19,7 +19,7 @@
         </div>
         <div class="row-1__col-3">
           <div class="grouth-title"><p>2021 GROWTH</p></div>
-          <div class="perc">+35%</div>
+          <div class="perc">-15%</div>
           <div class="gradient">
             <SingleChartGrouth :width="100" :height="100" />
           </div>
@@ -99,15 +99,13 @@ export default {
       p:first-child {
         font-size: 5rem;
         font-weight: bolder;
-        text-shadow: 1px 5px 3px #000;
+        text-shadow: 1px 1px 1px #fff;
         padding: 0 !important;
         span {
           display: block;
           font-size: 2rem;
           font-weight: bold;
           text-shadow: none !important;
-
-          // text-shadow: 1px 5px 3px #000;
         }
       }
     }
@@ -158,7 +156,7 @@ export default {
     }
     .perc {
       font-size: 6rem;
-      color: #43e0aa;
+      color: #cc1331;
     }
     .gradient {
       position: relative;
@@ -174,7 +172,7 @@ export default {
         color: #63799b;
       }
       &::after {
-        content: "2021";
+        content: "LREP";
         position: absolute;
         right: 0;
         bottom: -60px;

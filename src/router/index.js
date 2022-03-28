@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const baseRoute = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
   },
 ];
@@ -35,4 +35,12 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach(async function (to, _, next) {
+  var canAccess = await localStorage.getItem("haspermetion");
+  if (to.meta.requiresAuth && !canAccess) {
+    next("/");
+  } else {
+    next();
+  }
+});
 export default router;

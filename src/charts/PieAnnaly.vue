@@ -6,17 +6,7 @@ export default {
   extends: Pie,
   data() {
     return {
-      chartData: {
-        labels: ["Proved", "Reject"],
-        datasets: [
-          {
-            borderWidth: 0,
-            borderColor: ["#fff", "#000"],
-            backgroundColor: ["#43E0AA", "#935CCB"],
-            data: [35000, 1200],
-          },
-        ],
-      },
+      chartData: "",
       options: {
         legend: {
           display: true,
@@ -40,11 +30,12 @@ export default {
         },
       }
     );
+    resp;
     // let patientAnalytics = response.data.patient_analytics;
 
-    let anal = await resp.data.patient_analytics;
+    // let anal = await resp.data.patient_analytics;
 
-    console.log(anal);
+    // console.log(anal);
     // i will add data manualy because data values is 0
     this.chartData = {
       labels: ["Proved", "Reject"],
@@ -53,7 +44,7 @@ export default {
           borderWidth: 0,
           borderColor: ["#fff", "#000"],
           backgroundColor: ["#43E0AA", "#935CCB"],
-          data: [35000, 1200],
+          data: [20000, 1200],
         },
       ],
     };

@@ -67,9 +67,9 @@ export default {
         },
       ],
     }),
-      console.log(Phi);
+      // console.log(Phi);
 
-    this.renderChart(this.data, this.options);
+      this.renderChart(this.data, this.options);
   },
 };
 </script>

@@ -30,7 +30,7 @@
         <div class="col-1">
           <div class="fixed">
             <p class="tiltle-pie">PHI Vs Other Sectors</p>
-            <Phivsother class="chrt-pie"> </Phivsother>
+            <Phivsother :width="200" :height="200" />
           </div>
           <div class="contain">
             <div class="col-3">
@@ -96,7 +96,6 @@ export default {
     PatentPerPetient,
     PatentPerProduct,
     PatentPerPyer,
-
     phicom,
     Phivsother,
     MarkerMap,

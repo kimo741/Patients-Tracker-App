@@ -8,11 +8,11 @@ export default {
   data() {
     return {
       data: {
-        labels: ["YTD"],
+        labels: ["GROWTH"],
         datasets: [
           {
             label: "Total Patients Per City of Votes",
-            data: [883, 2000],
+            data: [1500],
             backgroundColor: ["#003696"],
             borderColor: ["#003696"],
             barPercentage: 0.4,

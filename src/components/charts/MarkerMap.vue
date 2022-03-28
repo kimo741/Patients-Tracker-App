@@ -2,12 +2,9 @@
   <div>
     <br />
     <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">
-      <GmapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        @click="center = m.position"
-      />
+      <GmapMarker :key="index" v-for="(m, index) in markers" />
+      <!-- :position="m.position"
+        @click="center = m.position" -->
     </GmapMap>
   </div>
 </template>
@@ -20,13 +17,11 @@ export default {
   data() {
     return {
       center: {},
-      currentPlace: null,
       markers: [],
       places: [],
     };
   },
   async mounted() {
-    this.geolocate();
     const token = localStorage.getItem("token");
     axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 
@@ -38,15 +33,17 @@ export default {
         },
       }
     );
-    let Phi = await resp.data.data;
-    let cairo = JSON.parse(resp.data.data[0].position);
-    let position = Phi.filter((f) => f.name != "Cairo").map(
+    const Phi = await resp.data.data;
+    const cairo = await JSON.parse(resp.data.data[0].position);
+    // console.log(cairo);
+    const mp = await Phi.filter((f) => f.name != "Cairo").map(
       (doc) => doc.position
     );
-    let JPosition = position.map((doc) => JSON.parse(doc));
-
+    const finale = JSON.parse(...mp);
+    // console.log(finale);
     this.center = cairo;
-    this.markers = [...JPosition];
+    this.markers = [finale];
+    this.geolocate();
   },
   methods: {
     setPlace(place) {
@@ -63,5 +60,3 @@ export default {
   },
 };
 </script>
-
-// AIzaSyBtGumO_LjPq3jkKkqfJjTOTVA4t2gOvAk

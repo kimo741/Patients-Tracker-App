@@ -2,7 +2,7 @@
   <div class="small">
     <h3 class="pat-title" style="padding-top: 20px">Patient Per Pyer</h3>
     <div class="per-product"></div>
-    <barmixen />
+    <barmixen :width="300" :height="340" />
     <!-- <column-chart :data="option"></column-chart> -->
   </div>
 </template>

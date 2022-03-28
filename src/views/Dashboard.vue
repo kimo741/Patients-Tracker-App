@@ -3,7 +3,7 @@
     <div class="top-side">
       <img class="home__logo" alt="Vue logo" src="../assets/header.png" />
     </div>
-    <Aside />
+    <Aside @click="logout" />
     <nav-right></nav-right>
 
     <router-view></router-view>
@@ -21,6 +21,13 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem("haspermetion");
+      localStorage.removeItem("token");
+      this.$router.replace("/");
+    },
   },
 };
 </script>

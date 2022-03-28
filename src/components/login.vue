@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containerrr">
     <div class="home">
       <div class="log">
         <div class="log__content">
@@ -71,7 +71,8 @@ export default {
         )
         .then((response) => {
           localStorage.setItem("token", response.data.access_token);
-          this.$router.push("/dashboard/admindash");
+          localStorage.setItem("haspermetion", true);
+          this.$router.replace("/dashboard/admindash");
           console.log(response);
         })
         .catch((error) => {
@@ -111,9 +112,15 @@ h3 {
   text-transform: capitalize;
   margin-bottom: 1.5rem;
 }
+.containerrr {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(221, 221, 221, 0.166);
+  box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.486);
+}
 .home {
-  margin-top: 15rem;
-  width: 90%;
+  margin-top: 5rem;
+  width: 100%;
   height: 100%;
 }
 .log {
@@ -121,9 +128,8 @@ h3 {
   display: flex;
   flex-direction: row;
   width: 90%;
-  height: 400px;
-  margin-left: 50px;
-  margin-top: 50px;
+  height: 100%;
+  margin: auto;
   &__icon {
     position: relative;
     top: 50%;
@@ -152,7 +158,7 @@ h3 {
   }
   &__content {
     word-spacing: 1px;
-    margin-top: 30%;
+    margin-top: 15%;
     margin-left: 30px;
   }
   &__form {
@@ -202,5 +208,8 @@ h3 {
   // border-radius: 3px;
   margin-top: 15px;
   border-radius: 10px;
+}
+.log__p {
+  z-index: 500;
 }
 </style>
